@@ -1,33 +1,43 @@
-#include <iostream>
+//
+// Created by Skyler Favors on 4/6/22.
+//
 
-#include <TGUI/TGUI.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/Network.hpp>
 
-#include "pages.h"
-
+#include "gui/gui.h"
 
 int main() {
-    // initialize the render window and the GUI
-    sf::RenderWindow window{{800, 600}, "TicTacToe"};
-    tgui::GuiSFML gui{window};
-    tgui::Theme::setDefault("BabyBlue.txt");
+    gui gui;
 
-    pages p(gui);
-
-    while (window.isOpen())
-    {
+    // run the program as long as the window is open
+    while (gui.window->isOpen()) {
+        // event is a union, only one member is valid at a time
         sf::Event event{};
-        while (window.waitEvent(event))
-        {
-            gui.handleEvent(event);
 
-            if (event.type == sf::Event::Closed)
-                window.close();
+        while (gui.window->pollEvent(event)) {
+            switch (event.type) {
 
-            window.clear();
-            gui.draw();
-            window.display();
+                case sf::Event::Closed:
+                    gui.window->close();
+                    break;
+
+                case sf::Event::Resized:
+                    gui.Update();
+                    break;
+
+                default:
+                    if (gui.currWindow == "main") {
+                        gui.MenuLoop(event);
+                    } else if (gui.currWindow == "game") {
+                        gui.GameLoop(event);
+                    }
+                    break;
+            }
+            gui.Update();
         }
     }
-
     return 0;
 }

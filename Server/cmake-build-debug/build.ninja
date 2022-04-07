@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: TicTacToeClient
+# Project: TicTacToeServer
 # Configurations: Debug
 # =============================================================================
 
@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/sfav/CLionProjects/TicTacToeV3/Client/cmake-build-debug/
+cmake_ninja_workdir = /Users/sfav/CLionProjects/TicTacToeV3/Server/cmake-build-debug/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/sfav/CLionProjects/TicTacToeV3/Client/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/sfav/CLionProjects/TicTacToeV3/Client -B/Users/sfav/CLionProjects/TicTacToeV3/Client/cmake-build-debug
+  COMMAND = cd /Users/sfav/CLionProjects/TicTacToeV3/Server/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/sfav/CLionProjects/TicTacToeV3/Server -B/Users/sfav/CLionProjects/TicTacToeV3/Server/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,72 +57,44 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/sfav/CLionProjects/TicTacToeV3/Client/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/sfav/CLionProjects/TicTacToeV3/Server/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
-# Object build statements for EXECUTABLE target TicTacToeClient
+# Object build statements for EXECUTABLE target TicTacToeServer
 
 
 #############################################
-# Order-only phony target for TicTacToeClient
+# Order-only phony target for TicTacToeServer
 
-build cmake_object_order_depends_target_TicTacToeClient: phony || CMakeFiles/TicTacToeClient.dir
+build cmake_object_order_depends_target_TicTacToeServer: phony || CMakeFiles/TicTacToeServer.dir
 
-build CMakeFiles/TicTacToeClient.dir/main.cpp.o: CXX_COMPILER__TicTacToeClient_Debug /Users/sfav/CLionProjects/TicTacToeV3/Client/main.cpp || cmake_object_order_depends_target_TicTacToeClient
-  DEP_FILE = CMakeFiles/TicTacToeClient.dir/main.cpp.o.d
+build CMakeFiles/TicTacToeServer.dir/src/main.cpp.o: CXX_COMPILER__TicTacToeServer_Debug /Users/sfav/CLionProjects/TicTacToeV3/Server/src/main.cpp || cmake_object_order_depends_target_TicTacToeServer
+  DEP_FILE = CMakeFiles/TicTacToeServer.dir/src/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode13.2.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17
   INCLUDES = -isystem /opt/homebrew/include
-  OBJECT_DIR = CMakeFiles/TicTacToeClient.dir
-  OBJECT_FILE_DIR = CMakeFiles/TicTacToeClient.dir
-
-build CMakeFiles/TicTacToeClient.dir/game/game.cpp.o: CXX_COMPILER__TicTacToeClient_Debug /Users/sfav/CLionProjects/TicTacToeV3/Client/game/game.cpp || cmake_object_order_depends_target_TicTacToeClient
-  DEP_FILE = CMakeFiles/TicTacToeClient.dir/game/game.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode13.2.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17
-  INCLUDES = -isystem /opt/homebrew/include
-  OBJECT_DIR = CMakeFiles/TicTacToeClient.dir
-  OBJECT_FILE_DIR = CMakeFiles/TicTacToeClient.dir/game
-
-build CMakeFiles/TicTacToeClient.dir/gui/gui.cpp.o: CXX_COMPILER__TicTacToeClient_Debug /Users/sfav/CLionProjects/TicTacToeV3/Client/gui/gui.cpp || cmake_object_order_depends_target_TicTacToeClient
-  DEP_FILE = CMakeFiles/TicTacToeClient.dir/gui/gui.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode13.2.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17
-  INCLUDES = -isystem /opt/homebrew/include
-  OBJECT_DIR = CMakeFiles/TicTacToeClient.dir
-  OBJECT_FILE_DIR = CMakeFiles/TicTacToeClient.dir/gui
-
-build CMakeFiles/TicTacToeClient.dir/game/network.cpp.o: CXX_COMPILER__TicTacToeClient_Debug /Users/sfav/CLionProjects/TicTacToeV3/Client/game/network.cpp || cmake_object_order_depends_target_TicTacToeClient
-  DEP_FILE = CMakeFiles/TicTacToeClient.dir/game/network.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode13.2.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17
-  INCLUDES = -isystem /opt/homebrew/include
-  OBJECT_DIR = CMakeFiles/TicTacToeClient.dir
-  OBJECT_FILE_DIR = CMakeFiles/TicTacToeClient.dir/game
-
-build CMakeFiles/TicTacToeClient.dir/gui/button.cpp.o: CXX_COMPILER__TicTacToeClient_Debug /Users/sfav/CLionProjects/TicTacToeV3/Client/gui/button.cpp || cmake_object_order_depends_target_TicTacToeClient
-  DEP_FILE = CMakeFiles/TicTacToeClient.dir/gui/button.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode13.2.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17
-  INCLUDES = -isystem /opt/homebrew/include
-  OBJECT_DIR = CMakeFiles/TicTacToeClient.dir
-  OBJECT_FILE_DIR = CMakeFiles/TicTacToeClient.dir/gui
+  OBJECT_DIR = CMakeFiles/TicTacToeServer.dir
+  OBJECT_FILE_DIR = CMakeFiles/TicTacToeServer.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target TicTacToeClient
+# Link build statements for EXECUTABLE target TicTacToeServer
 
 
 #############################################
-# Link the executable TicTacToeClient
+# Link the executable TicTacToeServer
 
-build TicTacToeClient: CXX_EXECUTABLE_LINKER__TicTacToeClient_Debug CMakeFiles/TicTacToeClient.dir/main.cpp.o CMakeFiles/TicTacToeClient.dir/game/game.cpp.o CMakeFiles/TicTacToeClient.dir/gui/gui.cpp.o CMakeFiles/TicTacToeClient.dir/game/network.cpp.o CMakeFiles/TicTacToeClient.dir/gui/button.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-network.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+build TicTacToeServer: CXX_EXECUTABLE_LINKER__TicTacToeServer_Debug CMakeFiles/TicTacToeServer.dir/src/main.cpp.o | /opt/homebrew/lib/libsfml-network.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode13.2.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib  /opt/homebrew/lib/libsfml-network.2.5.1.dylib  /opt/homebrew/lib/libsfml-window.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
-  OBJECT_DIR = CMakeFiles/TicTacToeClient.dir
+  LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-network.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+  OBJECT_DIR = CMakeFiles/TicTacToeServer.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = TicTacToeClient
-  TARGET_PDB = TicTacToeClient.dbg
+  TARGET_FILE = TicTacToeServer
+  TARGET_PDB = TicTacToeServer.dbg
 
 # =============================================================================
 # Target aliases.
@@ -133,9 +105,9 @@ build TicTacToeClient: CXX_EXECUTABLE_LINKER__TicTacToeClient_Debug CMakeFiles/T
 # =============================================================================
 
 #############################################
-# Folder: /Users/sfav/CLionProjects/TicTacToeV3/Client/cmake-build-debug
+# Folder: /Users/sfav/CLionProjects/TicTacToeV3/Server/cmake-build-debug
 
-build all: phony TicTacToeClient
+build all: phony TicTacToeServer
 
 # =============================================================================
 # Built-in targets
