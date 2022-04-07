@@ -15,6 +15,14 @@ game::game() {
     }
 }
 
+void game::ResetBoard() {
+    for (int y = 0; y < 3; y++) {
+        for (int x = 0; x < 3; x++) {
+            board[y][x] = 0;
+        }
+    }
+}
+
 bool game::PlaceMarker(int x, int y) {
     int p = 1;
     if (!yourTurn) {

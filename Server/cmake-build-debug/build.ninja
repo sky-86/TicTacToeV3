@@ -72,12 +72,12 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_TicTacToeServer: phony || CMakeFiles/TicTacToeServer.dir
 
-build CMakeFiles/TicTacToeServer.dir/src/main.cpp.o: CXX_COMPILER__TicTacToeServer_Debug /Users/sfav/CLionProjects/TicTacToeV3/Server/src/main.cpp || cmake_object_order_depends_target_TicTacToeServer
-  DEP_FILE = CMakeFiles/TicTacToeServer.dir/src/main.cpp.o.d
+build CMakeFiles/TicTacToeServer.dir/main.cpp.o: CXX_COMPILER__TicTacToeServer_Debug /Users/sfav/CLionProjects/TicTacToeV3/Server/main.cpp || cmake_object_order_depends_target_TicTacToeServer
+  DEP_FILE = CMakeFiles/TicTacToeServer.dir/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode13.2.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17
   INCLUDES = -isystem /opt/homebrew/include
   OBJECT_DIR = CMakeFiles/TicTacToeServer.dir
-  OBJECT_FILE_DIR = CMakeFiles/TicTacToeServer.dir/src
+  OBJECT_FILE_DIR = CMakeFiles/TicTacToeServer.dir
 
 
 # =============================================================================
@@ -87,7 +87,7 @@ build CMakeFiles/TicTacToeServer.dir/src/main.cpp.o: CXX_COMPILER__TicTacToeServ
 #############################################
 # Link the executable TicTacToeServer
 
-build TicTacToeServer: CXX_EXECUTABLE_LINKER__TicTacToeServer_Debug CMakeFiles/TicTacToeServer.dir/src/main.cpp.o | /opt/homebrew/lib/libsfml-network.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+build TicTacToeServer: CXX_EXECUTABLE_LINKER__TicTacToeServer_Debug CMakeFiles/TicTacToeServer.dir/main.cpp.o | /opt/homebrew/lib/libsfml-network.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode13.2.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-network.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/TicTacToeServer.dir

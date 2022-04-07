@@ -21,6 +21,7 @@ public:
     game();
     bool PlaceMarker(int x, int y);
     bool WinCheck();
+    void ResetBoard();
 };
 
 

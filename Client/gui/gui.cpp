@@ -194,11 +194,11 @@ void gui::GameLoop(sf::Event &event) {
         Update();
     }
 
-    if (g.isOver) {
-        std::cout << "Game is over" << std::endl;
-        sf::sleep(sf::seconds(3));
-        window->close();
-    }
+//    if (g.isOver) {
+//        std::cout << "Game is over" << std::endl;
+//        sf::sleep(sf::seconds(3));
+//        window->close();
+//    }
 
     switch (event.type) {
 
@@ -230,7 +230,33 @@ void gui::GameLoop(sf::Event &event) {
             Update();
             break;
 
-        case sf::Event::MouseMoved:
+        case sf::Event::KeyPressed:
+            if (g.isOver) {
+                sf::Packet outPacket;
+                if (event.key.code == sf::Keyboard::Escape) {
+                    // end program
+                    outPacket << (sf::Int8) 1;
+                    if (n.socket.send(outPacket) != sf::Socket::Done) {
+                        std::cout << "Error: sending quit game packet" << std::endl;
+                    }
+                    window->close();
+
+                } else if (event.key.code == sf::Keyboard::Return) {
+                    // play again
+                    sf::Int8 temp = 2;
+                    outPacket << temp;
+                    if (n.socket.send(outPacket) != sf::Socket::Done) {
+                        std::cout << "Error: sending play again packet" << std::endl;
+                    }
+                    g.isOver = false;
+                    g.ResetBoard();
+
+                    for (auto &btn : gameObjects.grid) {
+                        btn->setFillColor(sf::Color::Black);
+                    }
+                }
+            }
+
             break;
 
         default:

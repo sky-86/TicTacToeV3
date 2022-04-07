@@ -86,8 +86,13 @@ int gameLoop() {
     sf::Packet inPacket;
     sf::Int8 gameOver;
 
+    // 0 = game in progress
+    // 1 = end game
+    // 2 = play again
+
     while(true) {
         for (int i = 0; i < 2; i++) {
+            std::cout << "Waiting for turn packet" << std::endl;
 
             if (sockets[i]->receive(inPacket) != sf::Socket::Done) {
                 std::cout << "Error: receiving turn packet" << std::endl;
@@ -104,7 +109,30 @@ int gameLoop() {
             inPacket >> gameOver;
             if (gameOver == 1) {
                 std::cout << "Game is over" << std::endl;
-                return 1;
+
+                int count = 0;
+                for (int j = 0; j < 2; j++) {
+                    // check if players want to play again
+                    if (sockets[j]->receive(inPacket) != sf::Socket::Done) {
+                        std::cout << "Error: receiving play again packet" << std::endl;
+                        return -1;
+                    }
+                    sf::Int8 playAgain;
+                    inPacket >> playAgain;
+                    int temp = (int) playAgain;
+
+                    std::cout << "Received packet " << temp << std::endl;
+
+                    if (temp == 2) {
+                        count++;
+                    }
+                }
+                if (count == 2) {
+                    // players want to play again
+                    gameOver = false;
+                } else {
+                    return -1;
+                }
             }
         }
     }
