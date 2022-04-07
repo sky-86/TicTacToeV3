@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 find_package(SFML 2.5 COMPONENTS system network REQUIRED)
 
 # Sets SOURCES var
-set(SOURCES src/main.cpp)
+set(SOURCES main.cpp)
 
 add_executable(TicTacToeServer ${SOURCES})
 
