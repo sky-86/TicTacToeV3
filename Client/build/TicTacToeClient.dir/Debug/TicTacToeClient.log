@@ -1,0 +1,8 @@
+﻿  Building Custom Rule C:/Users/sky86/Documents/Projects/Cpp/TicTacToeV3/Client/CMakeLists.txt
+  main.cpp
+  game.cpp
+  gui.cpp
+  network.cpp
+  button.cpp
+  Generating Code...
+  TicTacToeClient.vcxproj -> C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\build\Debug\TicTacToeClient.exe

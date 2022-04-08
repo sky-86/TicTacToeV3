@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\game\game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\gui\gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\game\network.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\gui\button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\game\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\gui\gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\game\network.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\gui\button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\sky86\Documents\Projects\Cpp\TicTacToeV3\Client\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8712149B-CD47-346A-A867-0AC6C26B3F1D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E3EE4609-1038-3360-9EB8-A1CFF206F362}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+^C:\USERS\SKY86\DOCUMENTS\PROJECTS\CPP\TICTACTOEV3\CLIENT\BUILD\CMAKEFILES\6A67B8B25E8C8ECA3FEF6D96DA0E1EE8\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/sky86/Documents/Projects/Cpp/TicTacToeV3/Client -BC:/Users/sky86/Documents/Projects/Cpp/TicTacToeV3/Client/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/sky86/Documents/Projects/Cpp/TicTacToeV3/Client/build/TicTacToeClient.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
